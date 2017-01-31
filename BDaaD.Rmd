@@ -1,0 +1,113 @@
+---
+title: "The Discipline of Big Data"
+author: "Miles McBain, miles.mcbain@gmail.com"
+date: "24/1/2017"
+output:   
+  ioslides_presentation:
+    css: ./style.css
+---
+
+#Baggage
+
+##Big Hangover
+> The Big Challenge in Big Data right now is managing Big Expectations
+>
+> -Me
+
++ The field is young. Your potential clients are likely still in the R&D phase of big data capacilities. Exciting!
+- There is uncertainty about what is possible and what is needed.
+- Much of the data available is being repurposed. It was never intended to be analysed all at once. **Lots** of noise. **Lots** of data collection and tidying!
+- Success involves culture change.
+
+##Navigating your First Big Data Project
+* Be consultative
+* Get feedback often
+* Be ready for change
+* Multiply the time you think data prep will take by 2-4x
+
+Sound familiar to anyone?
+
+#In Practice
+
+## Big Data Enivornment
+> Big Data lives in The Cloud. The Cloud lives on Commodity Hardware. Commodity Hardware runs Linux. Linux is Open Source. Open Source tools process Big Data.
+
+* Work with Big Data in its home environment. Learn to love this technology stack.
+
+## Get into the Cloud
+Cloud computing providers:
+
+* Amazon Web Services (AWS), Google Compute Engine, Digital Ocean, Microsoft Azure.
+
+[AWS Demo](https://aws.amazon.com/console/)
+
+Links:
+
+* [Setting up RStudio in the Cloud](http://strimas.com/r/rstudio-cloud-1/)
+* [RStudio Amazon Image](http://www.louisaslett.com/RStudio_AMI/)
+* [Rocker](https://github.com/rocker-org/rocker)
+
+## Get into Linux
+* **It is a software developer's paradise.**
+* Not essential, but command line skills are very useful.
+* If you really want to learn make it your everyday OS for a semester.
+    - You can dual boot a laptop easily.
+* Great places to start:
+    [Ubuntu MATE](https://ubuntu-mate.org/about/)
+    [Linux Mint](https://www.linuxmint.com/about.php)
+  
+## Speak the language(s) | And Speak Them Well
+Pursue opportunities to learn:
+
+* 1 Open Source Scripting language: Julia, Python, **R**
+* 1 SQL Variant: Microsoft SQL, **Postgresql**
+* 1 JVM language: Java, Clojure, **Scala**
+* 1 low level performant language: Fortran, x86 Assembly, **C++**
+
+## Acquire the Big Data dialect
+* The elementry data types of Big Data programming are List/Column/Vector and Dataframe/Table/Matrix.
+* To lists you `map`, `apply`, `filter`
+* To tables you `select`, `join`, `pivot`, `transpose`, `gather`, `spread`
+
+Acquire this mental model. *R* is a great choice to learn this. So is *SQL*.
+
+## Build A Modelling Toolkit
+[Video Anthony Goldbloom on Winning Kaggle Competitions](https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/R-in-machine-learning-competitions):
+
+* XGBoost (Boosted trees) and Convolutional Neural Networks dominate Kaggle.
+* HOWEVER: [Sage advice from Jenny Bryan](https://twitter.com/jennybryan/status/782326492449480704)
+* Linear models fit fast, scale well, and are easy to interpret.
+* Kmeans is easy to understand and has 1 tuning parameter.
+    - Compliment with something you can understand e.g. CART, Random Forest. 
+    - Build out your toolkit one at a time!
+    - **Use ensembles** to get the most out of what you know.
+
+## Problem Solving Workflow
+Big Data platforms are contested resources that cost Big $. Don't go Big prematurely.
+
+![](http://r4ds.had.co.nz/diagrams/data-science.png)
+
+Hadoop is out of shot on the right.
+
+## Problem Solving Workflow
+
+1. Create solution on managable data sample using scripting language (Your practicals)
+    - Prove performance is acceptable and solution is satisfactor answer to problem.
+2. Scale up solution to smallest possible scale to run effectively of the life of the analysis. E.g:
+    - Implement in C++ to run really fast on a meaty server.
+    - Implement in Spark to run over Hadoop on a cluster.
+3. **Automate EVERYTHING** and Abstract useful parts for your next Big Data **pipeline**.
+
+## Pitfalls
+* A solution that is 95% complete could be as good as 0% if you're out of money and time. 
+    - Leave adequate time for scaling up, integration, and testing.
+* Avoid the INFINITE MODEL SPACE - A black hole that crushes keen analysts.
+    - Characterised by a combinatorial explosion of modelling options.
+    - "Maybe we should just try method X to see what happens".
+    - Stick to methods you understand. Work on samples.
+    - Keep records of every model you fit and the results that you got. Seriously.
+    
+##Other things to know and love
+* [Github](https://github.com/): It's the instagram for opensource software nerds. Get on it.
+* [Docker](https://www.docker.com/): It's the future of open source and open sceince. Just use it.
+*
